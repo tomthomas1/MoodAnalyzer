@@ -49,11 +49,13 @@ public class MoodAnalyzer {
             }
                 else if(message.toLowerCase().contains("happy")) {
                     return "HAPPY";
+            }  else if (message == "") {
+            	throw new MoodAnalyzerException("Entered Invalid Mood", MoodAnalyzerException.ExceptionType.ENTERED_EMPTY);
             } else {
                 return "ANY";
             }
         } catch (NullPointerException e) {
-            throw new MoodAnalyzerException("Exception found");
+        	throw new MoodAnalyzerException("Entered Invalid Mood", MoodAnalyzerException.ExceptionType.ENTERED_NULL);
         }
     }
 }
