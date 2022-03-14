@@ -7,6 +7,7 @@ import org.junit.Test;
  * We have created this test method to check the sad mood.
  * If we provide the string of sad then the method should return sad.
  * We have used the assert equals to check if the method o/p is sad.
+ * Given message “I am in Happy Mood” message in Constructor Should Return HAPPY.
  * @author Tom
  *
  */
@@ -17,6 +18,13 @@ public class MoodAnalyzerTest {
 		moodAnalyzer.setMessage("I am in Sad Mood");
         String actualResult = moodAnalyzer.analyseMood();
         Assert.assertEquals("SAD", actualResult);
+    }
+	
+	@Test
+    public void givenMessage_IsProper_ShouldReturnHappy() {
+		moodAnalyzer.setMessage("I am in Happy Mood");
+        String actualResult = moodAnalyzer.analyseMood();
+        Assert.assertEquals("HAPPY", actualResult);
     }
 	
 	/**
