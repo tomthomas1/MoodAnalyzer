@@ -11,11 +11,20 @@ import org.junit.Test;
  *
  */
 public class MoodAnalyzerTest {
+	MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
 	@Test
     public void givenMessage_IsProper_ShouldReturnSad() {
-        MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
         String actualResult = moodAnalyzer.analyseMood("I am Sad Mood");
         Assert.assertEquals("SAD", actualResult);
+    }
+	
+	/**
+	 * This method will return Happy if we pass as in any mood.
+	 */
+	@Test
+    public void givenMessage_IsProper_AndContain_Any_ShouldReturnHappy() {
+        String actualResult = moodAnalyzer.analyseMood("I am in Any Mood");
+        Assert.assertEquals("HAPPY", actualResult);
     }
 
 }

@@ -17,9 +17,11 @@ public class MoodAnalyzer {
 		if (message.toLowerCase().contains("happy")) {
 			return "HAPPY";
 		} else if (message.toLowerCase().contains("sad")) {
-			return "SAD";
-		} else {
-			return null;
+            return "SAD";
+        } else if (message.toLowerCase().contains("any")) {
+            return "HAPPY";
+        } else {
+            return null;
 		}
 	}
 }
