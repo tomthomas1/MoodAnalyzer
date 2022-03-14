@@ -14,7 +14,8 @@ public class MoodAnalyzerTest {
 	MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
 	@Test
     public void givenMessage_IsProper_ShouldReturnSad() {
-        String actualResult = moodAnalyzer.analyseMood("I am Sad Mood");
+		moodAnalyzer.setMessage("I am in Sad Mood");
+        String actualResult = moodAnalyzer.analyseMood();
         Assert.assertEquals("SAD", actualResult);
     }
 	
@@ -23,7 +24,8 @@ public class MoodAnalyzerTest {
 	 */
 	@Test
     public void givenMessage_IsProper_AndContain_Any_ShouldReturnHappy() {
-        String actualResult = moodAnalyzer.analyseMood("I am in Any Mood");
+		moodAnalyzer.setMessage("I am in Any Mood");
+        String actualResult = moodAnalyzer.analyseMood();
         Assert.assertEquals("HAPPY", actualResult);
     }
 

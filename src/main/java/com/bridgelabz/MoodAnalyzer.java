@@ -21,6 +21,17 @@ public class MoodAnalyzer {
 
     }	
 	
+    /**
+     * getters and setter for the mood message.
+     * @return - message
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 	/**
 	 * This method will compute if the mood is happy or sad.
 	 * 1. We will convert the message to lower case and check it the string contains happy or sad word in it.
@@ -28,7 +39,7 @@ public class MoodAnalyzer {
 	 * @param message -  We will pass the string message from the main method.
 	 * @return - We will return the mood Happy or Sad 
 	 */
-	public String analyseMood(String message) {
+	public String analyseMood() {
 		if (message.toLowerCase().contains("happy")) {
 			return "HAPPY";
 		} else if (message.toLowerCase().contains("sad")) {
