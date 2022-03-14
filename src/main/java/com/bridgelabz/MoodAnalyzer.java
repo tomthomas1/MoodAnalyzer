@@ -15,22 +15,11 @@ public class MoodAnalyzer {
 	 */
 	public String analyseMood(String message) {
 		if (message.toLowerCase().contains("happy")) {
-			return "Happy";
+			return "HAPPY";
 		} else if (message.toLowerCase().contains("sad")) {
-			return "Sad";
+			return "SAD";
 		} else {
 			return null;
 		}
-	}
-
-	/**
-	 * In the main method we have created an object and called the methods.
-	 */
-	public static void main(String[] args) {
-		MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-		String mood = moodAnalyzer.analyseMood("I am Happy");
-		System.out.println(mood);
-		mood = moodAnalyzer.analyseMood("I am Sad");
-		System.out.println(mood);
 	}
 }
