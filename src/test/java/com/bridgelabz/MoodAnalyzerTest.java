@@ -7,7 +7,7 @@ import org.junit.Test;
  * We have created this test method to check the sad mood.
  * If we provide the string of sad then the method should return sad.
  * We have used the assert equals to check if the method o/p is sad.
- * 3. If null value found than the NullPointerException will be triggered & it will return Invalid Mood.
+ * 3. If null value found than the NullPointerException will be triggered & it will return HAPPY.
  * @author Tom
  *
  */
@@ -39,12 +39,12 @@ public class MoodAnalyzerTest {
 	
 	/**
 	 * We have created this test case to check for NullException.
-	 * If null value passed then it will return Invalid Mood and will be checked by assert method. 
+	 * Given Null Mood Should Return Happy 
 	 */
 	@Test
-    public void NullExceptionHandler() {
+    public void NullReturnHappy() {
         moodAnalyzer.setMessage(null);
         String actualResult = moodAnalyzer.analyseMood();
-        Assert.assertEquals("Invalid Mood", actualResult);
+        Assert.assertEquals("HAPPY", actualResult);
     }
 }

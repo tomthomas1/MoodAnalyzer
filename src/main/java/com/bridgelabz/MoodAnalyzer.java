@@ -38,7 +38,7 @@ public class MoodAnalyzer {
 	 * 1. We will convert the message to lower case and check it the string contains happy or sad word in it.
 	 * Accordingly we will return Happy or Sad mood.
 	 * 2. We have used the try & catch block to check if user enters null value.
-	 * 3. If null value found than the NullPointerException will be triggered & it will return Invalid Mood.
+	 * 3. If null value found than the NullPointerException will be triggered & it will return HAPPY.
 	 * @param message -  We will pass the string message from the main method.
 	 * @return - We will return the mood Happy or Sad 
 	 */
@@ -53,7 +53,7 @@ public class MoodAnalyzer {
                 return "ANY";
             }
         } catch (NullPointerException e) {
-            return "Invalid Mood";
+            return "HAPPY";
         }
     }
 }
