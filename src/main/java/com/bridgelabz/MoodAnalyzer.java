@@ -6,6 +6,21 @@ package com.bridgelabz;
  *
  */
 public class MoodAnalyzer {
+	private String message;
+	
+	/**
+	 *  We have created this parameterized constructor and passing message. 
+	 * @param message
+	 */
+    public MoodAnalyzer(String message) {
+        this.message = message;
+    }
+
+    // we have also created a default constructor.
+    public MoodAnalyzer() {
+
+    }	
+	
 	/**
 	 * This method will compute if the mood is happy or sad.
 	 * 1. We will convert the message to lower case and check it the string contains happy or sad word in it.
